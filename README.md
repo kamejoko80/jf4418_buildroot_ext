@@ -5,12 +5,19 @@
 ##Build Steps##
 
    $ mkdir jf4418_buildroot
+   
    $ git clone https://github.com/pdtechvn/jf4418_buildroot_ext.git
+   
    $ git clone git://git.buildroot.net/buildroot
+   
    $ cd buildroot
+   
    $ git checkout 2015.11.x
+   
    $ make BR2_EXTERNAL=../jf4418_buildroot_ext jf4418_defconfig    
+   
    $ make menuconfig
+   
    $ make 
 
 ###Options###
