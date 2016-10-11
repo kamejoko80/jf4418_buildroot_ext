@@ -15,8 +15,9 @@
 
 ###Options###
 
-***jf4418_gui_defconfig** - For a Qt based application launcher and environment.
-***jf4418_defconfig**     - For JF4418 Basic configuration.
+jf4418_gui_defconfig - For a Qt based application launcher and environment.
+
+jf4418_defconfig     - For JF4418 Basic configuration.
 
 ###Known Issues###
 
