@@ -1,0 +1,8 @@
+config BR2_PACKAGE_FGPIO
+	bool "JF4418 Python GPIO"
+	depends on BR2_PACKAGE_PYTHON
+	help
+	  Simple GPIO interface for JF4418 boards.
+
+comment "fgpio requires build w/ Python"
+	depends on !BR2_PACKAGE_PYTHON
