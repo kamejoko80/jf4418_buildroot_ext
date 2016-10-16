@@ -1,10 +1,14 @@
 #!/bin/bash
 BOARD_NAME=$2
 BOARDS_PATH=$(dirname $(dirname $BASH_SOURCE))
+DEPLOY_PATH=$BOARDS_PATH/deploy
 OVERLAY_PATH=$BOARDS_PATH/overlays
 COMMON_OVERLAY=$OVERLAY_PATH/common
 BOARD_OVERLAY=$OVERLAY_PATH/$BOARD_NAME
 
+echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+
+cp -rf $DEPLOY_PATH $BASE_DIR/
 cp -rf $COMMON_OVERLAY/* $TARGET_DIR/
 cp -rf $BOARD_OVERLAY/* $TARGET_DIR/
 
