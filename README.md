@@ -48,10 +48,14 @@
    
 ###Booting Linux###
 
-   Insert uSD into uSD card socket of JF4418, after power on, the board run u-boot with console promt is s5p4418#, before booting Linux we set up u-boot environtment variables as bellow commands :
+   Insert uSD into uSD card socket of JF4418, after power on, the board run u-boot with console promt is s5p4418#
+   
+   Before booting Linux we set up u-boot environtment variables as bellow commands :
    
    s5p4418# setenv bootcmd 'fatload mmc 0:1 0x48000000 uImage; bootm 0x48000000'
+   
    s5p4418# setenv bootargs 'console=ttyAMA0,115200n8 root=/dev/mmcblk0p2 rootfstype=ext4 rootwait init=/sbin/init systemd.show_status=false g_ether.host_addr=82:cf:ce:fa:44:18 lcd=HDMI720P60'
+   
    s5p4418# save
 
    Then we can reset the board by the following command :
