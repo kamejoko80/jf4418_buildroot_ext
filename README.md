@@ -6,6 +6,8 @@
 
    $ mkdir jf4418_buildroot
    
+   $ cd jf4418_buildroot
+   
    $ git clone https://github.com/pdtechvn/jf4418_buildroot_ext.git
    
    $ git clone git://git.buildroot.net/buildroot
