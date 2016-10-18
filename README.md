@@ -2,6 +2,19 @@
    
    Using u-boot branch 2015.11.x   
     
+##Prerequisite Build Envrionment##
+
+   Host PC Ubuntu 12.04 64-bit or higher
+   
+   Install the bellow software packages :
+   
+   $ sudo apt-get install git-core gnupg flex bison gperf build-essential \
+     zip curl libc6-dev libncurses5-dev:i386 x11proto-core-dev \
+     libx11-dev:i386 libreadline6-dev:i386 libgl1-mesa-glx:i386 \
+     libgl1-mesa-dev g++-multilib mingw32 openjdk-6-jdk tofrodos \
+     python-markdown libxml2-utils xsltproc zlib1g-dev:i386 \
+     minicom tftpd uboot-mkimage expect libgl1-mesa-dri
+
 ##Build Steps##
 
    $ mkdir jf4418_buildroot
