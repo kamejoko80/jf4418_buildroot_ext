@@ -28,11 +28,13 @@
 
 ###Known Issues###
 
-   JF4418 requires running _hciconfig hci0 up_ after boot, to bring bluetooth up.
+   Using buildroot gcc toolschain can build u-boot successfully, but it doesn't work. 
+   
+   Work around, using external toolschain to buil u-boot, run build_uboot.sh to build u-boot again.
 
-###Precautions###
-
-   Root is the only user on initial startup, and has no password. Root can log in through SSH like this. Be sure to give root a password!!!
+   To bring up bluetooth after boot Linux run the following command :
+   
+   $ hciconfig hci0 up
    
 ###Copy Images into uSC card###
 
@@ -61,4 +63,67 @@
    Then we can reset the board by the following command :
 
    s5p4418# reset
+   
+###Loging User Account###
+
+   Welcome to Buildroot
+   buildroot login: root
+   
+   user : root
+   pass : no password
+
+   If use SSH console, we need to add password for user account.
+   
+###Configure WIFI###
+
+   To config WIFI connection, we follow below steps :
+
+   Create WIFI pass phase :
+
+   $ wpa_passphrase ssid
+
+   For example :
+
+   $ wpa_passphrase myssid
+   
+   $ reading passphrase from stdin
+   
+   $ mypassword
+   
+   We have result :
+   
+   network={
+   
+        ssid="myssid"
+        
+        #psk="mypassword"
+        
+        psk=2f0568b3492812bd56b946dbaf3fd7dd669b9a4602a09aa6462ff057949b025c
+        
+   }
+
+   Edit file wpa_supplicant.conf as bellow command :
+   
+   $ vi /etc/wpa_supplicant.conf
+   
+   Add above network setting into wpa_supplicant.conf, the file containt should be
+   
+   ctrl_interface=/var/run/wpa_supplicant
+   
+   ap_scan=1
+
+   network={
+   
+        ssid="myssid"
+        
+        #psk="mypassword"
+        
+        psk=2f0568b3492812bd56b946dbaf3fd7dd669b9a4602a09aa6462ff057949b025c
+        
+   }
+
+   Restart Linux in oder start WIFI network.
+
+   $ reboot
+
    
