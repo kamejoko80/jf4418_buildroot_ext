@@ -81,7 +81,7 @@
 
    s5p4418# reset
    
-##Loging User Account##
+##Login User Account##
 
    Welcome to Buildroot
    buildroot login: root
