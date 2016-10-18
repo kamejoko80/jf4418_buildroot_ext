@@ -24,13 +24,13 @@
    
    $ make 
 
-###Options###
+##Options##
 
    jf4418_gui_defconfig - For a Qt based application launcher and environment.
 
    jf4418_defconfig     - For JF4418 Basic configuration.
 
-###Known Issues###
+##Known Issues##
 
    Using buildroot gcc toolschain can build u-boot successfully, but it doesn't work. 
    
@@ -40,7 +40,7 @@
    
    $ hciconfig hci0 up
    
-###Copy Images into uSC card###
+##Copy Images into uSC card##
 
    $ cd output/deploy
    
@@ -52,7 +52,7 @@
    
    $ sudo ./fushing.sh /dev/sdx
    
-###Booting Linux###
+##Booting Linux##
 
    Insert uSD into uSD card socket of JF4418, after power on, the board run u-boot with console promt is s5p4418#
    
@@ -68,7 +68,7 @@
 
    s5p4418# reset
    
-###Loging User Account###
+##Loging User Account##
 
    Welcome to Buildroot
    buildroot login: root
@@ -78,7 +78,7 @@
 
    If use SSH console, we need to add password for user account.
    
-###Configure WIFI###
+##Configure WIFI##
 
    To config WIFI connection, we follow below steps :
 
