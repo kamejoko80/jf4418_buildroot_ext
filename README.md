@@ -20,6 +20,8 @@
    
    $ make menuconfig
    
+   Navigate the menu and select more software packages if you need to add them into root file system.
+   
    $ make 
 
 ###Options###
