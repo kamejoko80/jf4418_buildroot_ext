@@ -1,8 +1,0 @@
-config BR2_PACKAGE_FGPIO_DEMO
-	bool "PyQT GPIO Demo"
-	depends on BR2_PACKAGE_PYTHON_PYQT && \
-            BR2_PACKAGE_QAPPLAUNCHER
-	help
-	  Simple PyQT GPIO demonstration
-	  https://github.com/jrspruitt/FGPIO_DEMO
-

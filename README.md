@@ -69,7 +69,7 @@
 
    Insert uSD into uSD card socket of JF4418, after power on, the board run u-boot with console promt is s5p4418#
    
-   Before booting Linux we set up u-boot environtment variables as bellow commands :
+   Before booting Linux we set up u-boot environtment variables as bellow commands (set only onetime at fist booting Linux) :
    
    s5p4418# setenv bootcmd 'fatload mmc 0:1 0x48000000 uImage; bootm 0x48000000'
    
@@ -84,9 +84,11 @@
 ##Login User Account##
 
    Welcome to Buildroot
+
    buildroot login: root
    
    user : root
+
    pass : no password
 
    If use SSH console, we need to add password for user account.
@@ -142,5 +144,38 @@
    Restart Linux in oder start WIFI network.
 
    $ reboot
+
+##Configure ALSA Sound##   
+
+   Create a new ASLA configuration file as the following command :
+   
+   $ vi $HOME/.asoundrc
+   
+   Edit as the bellow containt :
+   
+   pcm.!default {
+
+       type plug
+
+       slave.pcm {
+
+          type dmix
+
+          ipc_key 1024
+
+          slave {
+
+            pcm "hw:0,0"
+
+            rate 44100
+            
+          }
+          
+       }
+       
+   }   
+   
+   By this way, the default sound card should be ALC5623 intead of HDMI SPDIF
+
 
    
