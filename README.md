@@ -53,7 +53,7 @@
    
    $ hciconfig hci0 up
    
-##Copy Images into uSC card##
+##Copy Images into uSD card##
 
    $ cd output/deploy
    
@@ -145,7 +145,7 @@
 
    $ reboot
 
-##Configure ALSA Sound##   
+## Configure ALSA Sound ##
 
    Create a new ASLA configuration file as the following command :
    
