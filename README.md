@@ -63,7 +63,7 @@
    
    Insert uSD card into PC, we'll have device name for example /dev/sdx (x should be b,c, or d...)
    
-   $ sudo ./fushing.sh /dev/sdx
+   $ sudo ./fusing.sh /dev/sdx
    
 ##Booting Linux##
 
