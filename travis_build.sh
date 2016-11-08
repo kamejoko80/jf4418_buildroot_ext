@@ -6,8 +6,6 @@ make
 export PATH=$PATH:$PWD
 cd ../
 
-apt-get install bc
-
 echo [Build Rootfs...]
 mkdir work_dir
 cd work_dir
