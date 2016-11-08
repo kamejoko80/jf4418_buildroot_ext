@@ -9,6 +9,7 @@ addons:
       packages:
         - wget
         - git
+	- bc
 script:
         - bash -ex travis_build.sh
 
