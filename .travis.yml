@@ -3,13 +3,12 @@ language: c
 compiler: gcc
 cache: ccache
 env:
-  - ARCH=arm CROSS_COMPILE=arm-cortexa9-linux-gnueabihf-
+  - ARCH=arm
 addons:
    apt:
       packages:
         - wget
         - git
-        - uboot-mkimage
 script:
         - bash -ex travis_build.sh
 
