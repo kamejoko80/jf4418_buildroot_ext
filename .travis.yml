@@ -7,9 +7,9 @@ env:
 addons:
    apt:
       packages:
+        - bc 
         - wget
         - git
-        - bc
 script:
         - bash -ex travis_build.sh
 
