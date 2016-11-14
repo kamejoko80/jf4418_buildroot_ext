@@ -3,13 +3,14 @@ language: c
 compiler: gcc
 cache: ccache
 env:
-  - ARCH=arm
+  global:
+   - TERM=dumb
 addons:
    apt:
       packages:
+        - bc 
         - wget
         - git
-	- bc
 script:
         - bash -ex travis_build.sh
 
