@@ -1,4 +1,4 @@
-https://travis-ci.org/pdtechvn/jf4418_buildroot_ext.svg?branch=master
+[![Build Status](https://travis-ci.org/pdtechvn/jf4418_buildroot_ext.svg?branch=master)](https://travis-ci.org/pdtechvn/jf4418_buildroot_ext)
 
 ##Buildroot External Files For JF4418##
    
