@@ -1,3 +1,5 @@
+https://travis-ci.org/pdtechvn/jf4418_buildroot_ext.svg?branch=master
+
 ##Buildroot External Files For JF4418##
    
    Using u-boot branch 2015.11.x   
